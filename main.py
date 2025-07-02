@@ -2442,7 +2442,7 @@ class NewsAnalyzer:
         print(f"报告类型: {self.report_type}")
 
         ids = [
-            ("bilibili", "bilibili"),
+            ("bilibili", "哔哩哔哩"),
             ("juejin", "掘金"),
             ("sspai", "少数派"),
             ("v2ex","V2EX"),
