@@ -2445,7 +2445,7 @@ class NewsAnalyzer:
             ("bilibili", "bilibili"),
             ("juejin", "掘金"),
             ("sspai", "少数派"),
-            ("v2ex","V2EX")，
+            ("v2ex","V2EX"),
             ("smzdm","什么值得买"),
             ("douyin","抖音"),
             ("zhihu","知乎"),
