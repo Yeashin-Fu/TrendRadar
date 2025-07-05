@@ -1,0 +1,122 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>频率词统计报告</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2 { color: #333; }
+                table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .word { font-weight: bold; }
+                .count { text-align: center; }
+                .percentage { text-align: center; }
+                .titles { max-width: 500px; }
+                .source { color: #666; font-style: italic; }
+                .error { color: #d9534f; }
+                .news-link { 
+                    color: #007bff; 
+                    text-decoration: none; 
+                    border-bottom: 1px dotted #007bff;
+                }
+                .news-link:hover { 
+                    color: #0056b3; 
+                    text-decoration: underline; 
+                }
+                .news-link:visited { 
+                    color: #6f42c1; 
+                }
+                .no-link { 
+                    color: #333; 
+                }
+                .new-title {
+                    background-color: #fff3cd;
+                    border: 1px solid #ffc107;
+                    border-radius: 3px;
+                    padding: 2px 6px;
+                    margin: 2px 0;
+                }
+                .new-section {
+                    background-color: #d1ecf1;
+                    border: 1px solid #bee5eb;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 10px;
+                }
+                .new-section h3 {
+                    color: #0c5460;
+                    margin-top: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>频率词统计报告</h1>
+        <p>总标题数: 320</p><p>生成时间: 2025-07-05 20:23:31</p>
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>频率词</th>
+                    <th>出现次数</th>
+                    <th>占比</th>
+                    <th>相关标题</th>
+                </tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td class="word">地震 台风 特大暴雨 橙色预警 红色预警 灾情 爆炸 坍塌</td>
+                    <td class="count">14</td>
+                    <td class="percentage">4.38%</td>
+                    <td class="titles">[知乎] <a href="https://www.zhihu.com/question/1924739602696071014" target="_blank" class="news-link">日本气象厅驳斥「地震预言」称其为骗局，目前日本各方面状况如何？传言对日本有哪些影响？</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 20时23分</font><br><div class='new-title'>🆕 [微博] <a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%23%E6%97%A5%E6%9C%AC%E8%A5%BF%E5%8D%97%E7%BE%A4%E5%B2%9B%E5%9C%B0%E9%9C%87%23&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">日本西南群岛地震</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 20时23分</font></div><br>[澎湃新闻] <a href="https://m.thepaper.cn/newsDetail_forward_31106454" target="_blank" class="news-link">中使馆提醒在日中国公民防范自然灾害：密切关注地震动态信息</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 20时23分</font><br>[今日头条] <a href="https://www.toutiao.com/trending/7523417632876498442/" target="_blank" class="news-link">超20万人熬夜看日本地震监测直播</a> <font color='red'><strong>[5]</strong></font> <font color='grey'>- 20时23分</font><br>[哔哩哔哩] <a href="https://search.bilibili.com/all?keyword=%E6%97%A5%E6%9C%AC%E5%A4%A7%E5%9C%B0%E9%9C%87%E9%A2%84%E8%A8%80%E6%9C%89%E5%A4%9A%E7%A6%BB%E8%B0%B1" target="_blank" class="news-link">日本大地震预言有多离谱</a> [6] <font color='grey'>- 20时23分</font><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7523476112555380262/" target="_blank" class="news-link">台风丹娜丝能缓解高温局面吗</a> [9] <font color='grey'>- 20时23分</font></div><br><div class='new-title'>🆕 [澎湃新闻] <a href="https://m.thepaper.cn/newsDetail_forward_31113452" target="_blank" class="news-link">院士预测广东将发生8级以上大地震？倪四道院士团队辟谣</a> [10] <font color='grey'>- 20时23分</font></div><br>[百度热搜] <a href="https://www.baidu.com/s?wd=%E9%99%A2%E5%A3%AB%E9%A2%84%E6%B5%8B%E5%B9%BF%E4%B8%9C%E5%B0%86%E6%9C%898%E7%BA%A7%E4%BB%A5%E4%B8%8A%E5%9C%B0%E9%9C%87%EF%BC%9F%E5%81%87" target="_blank" class="news-link">院士预测广东将有8级以上地震？假</a> [11] <font color='grey'>- 20时23分</font><br>[百度热搜] <a href="https://www.baidu.com/s?wd=%E5%85%B3%E9%94%AE%E4%BD%8D%E7%BD%AE%E5%A4%9A%E6%AC%A1%E5%9C%B0%E9%9C%87+%E6%97%A5%E6%9C%AC%E6%94%BF%E5%BA%9C%E7%B4%A7%E6%80%A5%E5%9B%9E%E5%BA%94" target="_blank" class="news-link">关键位置多次地震 日本政府紧急回应</a> [12] <font color='grey'>- 20时23分</font><br>[抖音] <a href="https://www.douyin.com/hot/2156076" target="_blank" class="news-link">今年第4号台风丹娜丝生成</a> [16] <font color='grey'>- 20时23分</font><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7523462324896665098/" target="_blank" class="news-link">地震传言或重创日本旅游经济</a> [19] <font color='grey'>- 20时23分</font></div><br><div class='new-title'>🆕 [微博] <a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%E5%8F%B0%E9%A3%8E&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">台风</a> [20] <font color='grey'>- 20时23分</font></div><br><div class='new-title'>🆕 [百度热搜] <a href="https://www.baidu.com/s?wd=%E5%8F%B0%E9%A3%8E%E2%80%9C%E4%B8%B9%E5%A8%9C%E4%B8%9D%E2%80%9D%E6%88%96%E5%9C%A8%E9%97%BD%E6%B5%99%E6%B2%BF%E6%B5%B7%E7%99%BB%E9%99%86" target="_blank" class="news-link">台风“丹娜丝”或在闽浙沿海登陆</a> [22] <font color='grey'>- 20时23分</font></div><br>[百度热搜] <a href="https://www.baidu.com/s?wd=%E8%B6%8520%E4%B8%87%E4%BA%BA%E7%86%AC%E5%A4%9C%E7%9C%8B%E6%97%A5%E6%9C%AC%E5%9C%B0%E9%9C%87%E7%9B%91%E6%B5%8B%E7%9B%B4%E6%92%AD" target="_blank" class="news-link">超20万人熬夜看日本地震监测直播</a> [25] <font color='grey'>- 20时23分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td class="word">618 双11</td>
+                    <td class="count">3</td>
+                    <td class="percentage">0.94%</td>
+                    <td class="titles">[少数派] <a href="https://sspai.com/post/100020" target="_blank" class="news-link">618 空前史低价，错过拍大腿</a> [12] <font color='grey'>- 20时23分</font><br>[少数派] <a href="https://sspai.com/post/99616" target="_blank" class="news-link">理性购物 618：要不要买新键盘，以及有啥值得买</a> [18] <font color='grey'>- 20时23分</font><br>[少数派] <a href="https://sspai.com/post/99406" target="_blank" class="news-link">618 又来了，我们为你准备了一份护肤购物清单</a> [22] <font color='grey'>- 20时23分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td class="word">辟谣</td>
+                    <td class="count">2</td>
+                    <td class="percentage">0.62%</td>
+                    <td class="titles">[抖音] <a href="https://www.douyin.com/hot/2156098" target="_blank" class="news-link">一周辟谣通告</a> [12] <font color='grey'>- 20时23分</font><br>[今日头条] <a href="https://www.toutiao.com/trending/7522697227266719783/" target="_blank" class="news-link">日本政府辟谣末世预言</a> [16] <font color='grey'>- 20时23分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td class="word">郑州 许昌 长葛 胖东来</td>
+                    <td class="count">2</td>
+                    <td class="percentage">0.62%</td>
+                    <td class="titles"><div class='new-title'>🆕 [百度热搜] <a href="https://www.baidu.com/s?wd=%E9%83%91%E5%B7%9E%E4%B8%80%E4%BA%94%E6%98%9F%E7%BA%A7%E9%85%92%E5%BA%97%E6%91%86%E5%9C%B0%E6%91%8A%E6%97%A5%E5%85%A53%E4%B8%87" target="_blank" class="news-link">郑州一五星级酒店摆地摊日入3万</a> <font color='red'><strong>[5]</strong></font> <font color='grey'>- 20时23分</font></div><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7522701771165433875/" target="_blank" class="news-link">郑州一五星级酒店摆地摊日收入3万</a> [6] <font color='grey'>- 20时23分</font></div></td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="word">首个</td>
+                    <td class="count">1</td>
+                    <td class="percentage">0.31%</td>
+                    <td class="titles">[掘金] <a href="https://juejin.cn/post/7522421979534835738" target="_blank" class="news-link">老黄预言成真！全球首个 AI 原生游戏引擎，一句话秒出 GTA 级神作</a> [22] <font color='grey'>- 20时23分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td class="word">安卓 Android</td>
+                    <td class="count">1</td>
+                    <td class="percentage">0.31%</td>
+                    <td class="titles">[掘金] <a href="https://juejin.cn/post/7522102582288629786" target="_blank" class="news-link">如何实现 Android App 的抓包防护？又该如何绕过？一文看懂攻防博弈</a> [19] <font color='grey'>- 20时23分</font></td>
+                </tr>
+            
+            </table>
+        
+            <div class="new-section">
+                <h3>🆕 本次新增热点新闻 (共 8 条)</h3>
+            <h4>今日头条 (3 条)</h4><ul><li><a href="https://www.toutiao.com/trending/7522701771165433875/" target="_blank" class="news-link">郑州一五星级酒店摆地摊日收入3万</a> [6]</li><li><a href="https://www.toutiao.com/trending/7523476112555380262/" target="_blank" class="news-link">台风丹娜丝能缓解高温局面吗</a> [9]</li><li><a href="https://www.toutiao.com/trending/7523462324896665098/" target="_blank" class="news-link">地震传言或重创日本旅游经济</a> [19]</li></ul><h4>百度热搜 (2 条)</h4><ul><li><a href="https://www.baidu.com/s?wd=%E9%83%91%E5%B7%9E%E4%B8%80%E4%BA%94%E6%98%9F%E7%BA%A7%E9%85%92%E5%BA%97%E6%91%86%E5%9C%B0%E6%91%8A%E6%97%A5%E5%85%A53%E4%B8%87" target="_blank" class="news-link">郑州一五星级酒店摆地摊日入3万</a> <font color='red'><strong>[5]</strong></font></li><li><a href="https://www.baidu.com/s?wd=%E5%8F%B0%E9%A3%8E%E2%80%9C%E4%B8%B9%E5%A8%9C%E4%B8%9D%E2%80%9D%E6%88%96%E5%9C%A8%E9%97%BD%E6%B5%99%E6%B2%BF%E6%B5%B7%E7%99%BB%E9%99%86" target="_blank" class="news-link">台风“丹娜丝”或在闽浙沿海登陆</a> [22]</li></ul><h4>微博 (2 条)</h4><ul><li><a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%23%E6%97%A5%E6%9C%AC%E8%A5%BF%E5%8D%97%E7%BE%A4%E5%B2%9B%E5%9C%B0%E9%9C%87%23&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">日本西南群岛地震</a> <font color='red'><strong>[2]</strong></font></li><li><a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%E5%8F%B0%E9%A3%8E&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">台风</a> [20]</li></ul><h4>澎湃新闻 (1 条)</h4><ul><li><a href="https://m.thepaper.cn/newsDetail_forward_31113452" target="_blank" class="news-link">院士预测广东将发生8级以上大地震？倪四道院士团队辟谣</a> [10]</li></ul></div>
+        </body>
+        </html>
+        
