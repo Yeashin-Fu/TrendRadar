@@ -2444,7 +2444,6 @@ class NewsAnalyzer:
         ids = [
             ("bilibili", "哔哩哔哩"),
             ("juejin", "掘金"),
-            ("sspai", "少数派"),
             ("v2ex","V2EX"),
             ("douyin","抖音"),
             ("zhihu","知乎"),
