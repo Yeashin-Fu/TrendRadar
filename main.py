@@ -183,7 +183,7 @@ def check_version_update(
         remote_tuple = parse_version(remote_version)
 
         need_update = current_tuple < remote_tuple
-        return need_update, remote_version if need_update else 无
+        return need_update, remote_version if need_update else None
 
     except Exception as e:
         print(f"版本检查失败: {e}")
@@ -208,11 +208,11 @@ def html_escape(text: str) -> str:
         text = str(text)
 
     return (
-        text.替换("&"， "&amp;")
+        text.replace("&", "&amp;")
         .replace("<", "&lt;")
-        。替换(">"， "&gt;")
-        。替换('"', "&quot;")
-        。替换("'"， "&#x27;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&#x27;")
     )
 
 
@@ -226,8 +226,8 @@ class DataFetcher:
     def fetch_data(
         self,
         id_info: Union[str, Tuple[str, str]],
-        max_retries: int = 2，
-        min_retry_wait: int = 3，
+        max_retries: int = 2,
+        min_retry_wait: int = 3,
         max_retry_wait: int = 5,
     ) -> Tuple[Optional[str], str, str]:
         """获取指定ID数据，支持重试"""
@@ -241,7 +241,7 @@ class DataFetcher:
 
         proxies = None
         if self.proxy_url:
-            proxies = {"http": self.proxy_url， "https": self.proxy_url}
+            proxies = {"http": self.proxy_url, "https": self.proxy_url}
 
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
@@ -1049,7 +1049,7 @@ def count_word_frequency(
             total_input_news = sum(len(titles) for titles in results.values())
             filter_status = (
                 "全部显示"
-                if len(word_groups) == 1 和 word_groups[0]["group_key"] == "全部新闻"
+                if len(word_groups) == 1 and word_groups[0]["group_key"] == "全部新闻"
                 else "频率词匹配"
             )
             print(
@@ -1057,17 +1057,17 @@ def count_word_frequency(
             )
         else:
             if new_titles:
-                total_new_count = sum(len(titles) for titles 在 new_titles.values())
+                total_new_count = sum(len(titles) for titles in new_titles.values())
                 filter_status = (
                     "全部显示"
                     if len(word_groups) == 1
-                    和 word_groups[0]["group_key"] == "全部新闻"
+                    and word_groups[0]["group_key"] == "全部新闻"
                     else "匹配频率词"
                 )
                 print(
                     f"增量模式：{total_new_count} 条新增新闻中，有 {matched_new_count} 条{filter_status}"
                 )
-                if matched_new_count == 0 和 len(word_groups) > 1:
+                if matched_new_count == 0 and len(word_groups) > 1:
                     print("增量模式：没有新增新闻匹配频率词，将不会发送通知")
             else:
                 print("增量模式：未检测到新增新闻")
@@ -1083,7 +1083,7 @@ def count_word_frequency(
                 f"当前榜单模式：当天第一次爬取，{total_input_news} 条当前榜单新闻中有 {matched_new_count} 条{filter_status}"
             )
         else:
-            matched_count = sum(stat["count"] for stat 在 word_stats.values())
+            matched_count = sum(stat["count"] for stat in word_stats.values())
             filter_status = (
                 "全部显示"
                 if len(word_groups) == 1 and word_groups[0]["group_key"] == "全部新闻"
@@ -1094,9 +1094,9 @@ def count_word_frequency(
             )
 
     stats = []
-    for group_key, data 在 word_stats.items():
+    for group_key, data in word_stats.items():
         all_titles = []
-        for source_id, title_list 在 data["titles"].items():
+        for source_id, title_list in data["titles"].items():
             all_titles.extend(title_list)
 
         # 按权重排序
@@ -2423,7 +2423,7 @@ def split_content_into_batches(
                 start_index = 1
 
             # 处理剩余新增新闻
-            for j 在 range(start_index, len(source_data["titles"])):
+            for j in range(start_index, len(source_data["titles"])):
                 title_data = source_data["titles"][j]
                 title_data_copy = title_data.copy()
                 title_data_copy["is_new"] = False
@@ -3009,15 +3009,15 @@ class NewsAnalyzer:
         report_type: str,
         mode: str,
         failed_ids: Optional[List] = None,
-        new_titles: Optional[Dict] = 无,
-        id_to_name: Optional[Dict] = 无,
+        new_titles: Optional[Dict] = None,
+        id_to_name: Optional[Dict] = None,
     ) -> bool:
         """统一的通知发送逻辑，包含所有判断条件"""
         has_webhook = self._has_webhook_configured()
 
         if (
             CONFIG["ENABLE_NOTIFICATION"]
-            和 has_webhook
+            and has_webhook
             and self._has_valid_content(stats, new_titles)
         ):
             send_to_webhooks(
@@ -3026,7 +3026,7 @@ class NewsAnalyzer:
                 report_type,
                 new_titles,
                 id_to_name,
-                self.update_info，
+                self.update_info,
                 self.proxy_url,
                 mode=mode,
             )
@@ -3037,7 +3037,7 @@ class NewsAnalyzer:
             print(f"跳过{report_type}通知：通知功能已禁用")
         elif (
             CONFIG["ENABLE_NOTIFICATION"]
-            和 has_webhook
+            and has_webhook
             and not self._has_valid_content(stats, new_titles)
         ):
             mode_strategy = self._get_mode_strategy()
@@ -3252,7 +3252,7 @@ class NewsAnalyzer:
                 )
 
         # 生成汇总报告（如果需要）
-        summary_html = 无
+        summary_html = None
         if mode_strategy["should_generate_summary"]:
             if mode_strategy["should_send_realtime"]:
                 # 如果已经发送了实时通知，汇总只生成HTML不发送通知
@@ -3264,16 +3264,16 @@ class NewsAnalyzer:
                 summary_html = self._generate_summary_report(mode_strategy)
 
         # 打开浏览器（仅在非容器环境）
-        if self._should_open_browser() 和 html_file:
+        if self._should_open_browser() and html_file:
             if summary_html:
                 summary_url = "file://" + str(Path(summary_html).resolve())
                 print(f"正在打开汇总报告: {summary_url}")
                 webbrowser.open(summary_url)
             else:
-                file_url = "file://" + str(Path(html_file)。resolve())
+                file_url = "file://" + str(Path(html_file).resolve())
                 print(f"正在打开HTML报告: {file_url}")
                 webbrowser.open(file_url)
-        elif self.is_docker_container 和 html_file:
+        elif self.is_docker_container and html_file:
             if summary_html:
                 print(f"汇总报告已生成（Docker环境）: {summary_html}")
             else:
@@ -3281,7 +3281,7 @@ class NewsAnalyzer:
 
         return summary_html
 
-    def run(self) -> 无:
+    def run(self) -> None:
         """执行分析流程"""
         try:
             self._initialize_and_check_config()
