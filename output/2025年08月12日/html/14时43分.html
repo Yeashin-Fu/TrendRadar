@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>频率词统计报告</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2 { color: #333; }
+            table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .word { font-weight: bold; }
+            .count { text-align: center; }
+            .percentage { text-align: center; }
+            .titles { max-width: 500px; }
+            .source { color: #666; font-style: italic; }
+            .error { color: #d9534f; }
+            .news-link { 
+                color: #007bff; 
+                text-decoration: none; 
+                border-bottom: 1px dotted #007bff;
+            }
+            .news-link:hover { 
+                color: #0056b3; 
+                text-decoration: underline; 
+            }
+            .news-link:visited { 
+                color: #6f42c1; 
+            }
+            .no-link { 
+                color: #333; 
+            }
+            .new-title {
+                background-color: #fff3cd;
+                border: 1px solid #ffc107;
+                border-radius: 3px;
+                padding: 2px 6px;
+                margin: 2px 0;
+            }
+            .new-section {
+                background-color: #d1ecf1;
+                border: 1px solid #bee5eb;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            .new-section h3 {
+                color: #0c5460;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>频率词统计报告</h1>
+    <p>报告类型: 实时分析</p><p>总标题数: 69</p><p>生成时间: 2025-08-12 14:43:19</p>
+        <table>
+            <tr>
+                <th>排名</th>
+                <th>频率词</th>
+                <th>出现次数</th>
+                <th>占比</th>
+                <th>相关标题</th>
+            </tr>
+    
+            <tr>
+                <td>1</td>
+                <td class="word">地震 台风 特大暴雨 橙色预警 红色预警 爆炸 坍塌</td>
+                <td class="count">4</td>
+                <td class="percentage">5.8%</td>
+                <td class="titles"><div class='new-title'>🆕 [抖音] <a href="https://www.douyin.com/hot/2200777" target="_blank" class="news-link">台风杨柳最强可达强台风级</a> <font color='red'><strong>[4]</strong></font> <font color='grey'>- 14时43分</font></div><br><div class='new-title'>🆕 [微博] <a href="https://m.weibo.cn/search?containerid=100103type%3D1%26t%3D10%26q%3D%E6%B2%B3%E5%8C%97%E8%94%9A%E5%8E%BF%E5%9C%B0%E9%9C%87&amp;stream_entry_id=31&amp;isnewpage=1&amp;extparam=seat%3D1%26lcate%3D5001%26realpos%3D4%26stream_entry_id%3D31%26q%3D%25E6%25B2%25B3%25E5%258C%2597%25E8%2594%259A%25E5%258E%25BF%25E5%259C%25B0%25E9%259C%2587%26dgr%3D0%26cate%3D5001%26filter_type%3Drealtimehot%26band_rank%3D4%26c_type%3D31%26flag%3D1%26pos%3D3%26display_time%3D1754980940%26pre_seqid%3D17549809408230228738626" target="_blank" class="news-link">河北蔚县地震</a> <font color='red'><strong>[4]</strong></font> <font color='grey'>- 14时43分</font></div><br><div class='new-title'>🆕 [抖音] <a href="https://www.douyin.com/hot/2200806" target="_blank" class="news-link">天津港大爆炸10周年</a> [10] <font color='grey'>- 14时43分</font></div><br><div class='new-title'>🆕 [微博] <a href="https://m.weibo.cn/search?containerid=100103type%3D1%26t%3D10%26q%3D%23%E6%B2%B3%E5%8C%97%E8%94%9A%E5%8E%BF%E5%8F%91%E7%94%9F3.1%E7%BA%A7%E5%9C%B0%E9%9C%87%23&amp;stream_entry_id=31&amp;isnewpage=1&amp;extparam=seat%3D1%26lcate%3D5001%26realpos%3D13%26stream_entry_id%3D31%26q%3D%2523%25E6%25B2%25B3%25E5%258C%2597%25E8%2594%259A%25E5%258E%25BF%25E5%258F%2591%25E7%2594%259F3.1%25E7%25BA%25A7%25E5%259C%25B0%25E9%259C%2587%2523%26dgr%3D0%26cate%3D5001%26filter_type%3Drealtimehot%26band_rank%3D13%26c_type%3D31%26flag%3D1%26pos%3D13%26display_time%3D1754980940%26pre_seqid%3D17549809408230228738626" target="_blank" class="news-link">河北蔚县发生3.1级地震</a> [13] <font color='grey'>- 14时43分</font></div></td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td class="word">灾情 灾害 死亡 伤亡 去世</td>
+                <td class="count">4</td>
+                <td class="percentage">5.8%</td>
+                <td class="titles"><div class='new-title'>🆕 [微博] <a href="https://m.weibo.cn/search?containerid=100103type%3D1%26t%3D10%26q%3D%2333%E5%B2%81%E5%A5%B3%E8%80%81%E5%B8%88%E4%BA%8C%E8%83%8E%E9%9A%BE%E4%BA%A7%E5%8E%BB%E4%B8%96%23&amp;stream_entry_id=31&amp;isnewpage=1&amp;extparam=seat%3D1%26lcate%3D5001%26realpos%3D11%26stream_entry_id%3D31%26q%3D%252333%25E5%25B2%2581%25E5%25A5%25B3%25E8%2580%2581%25E5%25B8%2588%25E4%25BA%258C%25E8%2583%258E%25E9%259A%25BE%25E4%25BA%25A7%25E5%258E%25BB%25E4%25B8%2596%2523%26dgr%3D0%26cate%3D5001%26filter_type%3Drealtimehot%26band_rank%3D11%26c_type%3D31%26flag%3D2%26pos%3D11%26display_time%3D1754980940%26pre_seqid%3D17549809408230228738626" target="_blank" class="news-link">33岁女老师二胎难产去世</a> [11] <font color='grey'>- 14时43分</font></div><br><div class='new-title'>🆕 [微博] <a href="https://m.weibo.cn/search?containerid=100103type%3D1%26t%3D10%26q%3D%23%E6%89%93%E6%B0%B4%E4%BB%97%E6%84%9F%E6%9F%93%E9%A3%9F%E8%84%91%E8%99%AB%E7%94%B7%E7%AB%A5%E5%8E%BB%E4%B8%96%23&amp;stream_entry_id=31&amp;isnewpage=1&amp;extparam=seat%3D1%26lcate%3D5001%26realpos%3D16%26stream_entry_id%3D31%26q%3D%2523%25E6%2589%2593%25E6%25B0%25B4%25E4%25BB%2597%25E6%2584%259F%25E6%259F%2593%25E9%25A3%259F%25E8%2584%2591%25E8%2599%25AB%25E7%2594%25B7%25E7%25AB%25A5%25E5%258E%25BB%25E4%25B8%2596%2523%26dgr%3D0%26cate%3D5001%26filter_type%3Drealtimehot%26band_rank%3D16%26c_type%3D31%26flag%3D0%26pos%3D16%26display_time%3D1754980940%26pre_seqid%3D17549809408230228738626" target="_blank" class="news-link">打水仗感染食脑虫男童去世</a> [16] <font color='grey'>- 14时43分</font></div><br><div class='new-title'>🆕 [知乎] <a href="https://www.zhihu.com/question/1938361219233875644" target="_blank" class="news-link">河南高某因饲养的烈性犬咬死他人，法院以过失致人死亡罪判处其有期徒刑六年六个月，对此你怎么看？</a> [18] <font color='grey'>- 14时43分</font></div><br><div class='new-title'>🆕 [百度热搜] <a href="https://www.baidu.com/s?wd=%E6%89%93%E6%B0%B4%E4%BB%97%E6%84%9F%E6%9F%93%E9%A3%9F%E8%84%91%E8%99%AB%E7%94%B7%E7%AB%A5%E5%8E%BB%E4%B8%96" target="_blank" class="news-link">打水仗感染食脑虫男童去世</a> [28] <font color='grey'>- 14时43分</font></div></td>
+            </tr>
+        
+        </table>
+    
+    </body>
+    </html>
+    
